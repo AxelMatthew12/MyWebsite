@@ -2,12 +2,12 @@
 #navbar {
     overflow: hidden;
     background-color: #f29d9d;
-    padding: 90px 10px; /* Large padding which will shrink on scroll (using JS) */
+    padding: 15px 10px; /* Large padding which will shrink on scroll (using JS) */
     transition: 0.4s; /* Adds a transition effect when the padding is decreased */
     position: fixed; /* Sticky/fixed navbar */
-    width: 97%;
+    width: 98.5%;
     top: 0; /* At the top */
-    z-index: 99;
+    z-index: 80;
   }
   
   /* Style the navbar links */
@@ -60,5 +60,15 @@
       float: none;
     }
   }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(165, 168, 10);
+    color: rgb(0, 0, 0);
+    text-align: center;
+ }
 
   

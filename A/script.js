@@ -1,11 +1,13 @@
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("navbar").style.padding = "30px 10px";
-    document.getElementById("logo").style.fontSize = "25px";
-  } else {
-    document.getElementById("navbar").style.padding = "80px 10px";
-    document.getElementById("logo").style.fontSize = "35px";
-  }
+    var navbar = document.getElementById("navbar");
+    var logo = document.getElementById("logo");
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        navbar.style.padding = "10px 10px";
+        logo.style.fontSize = "25px";
+    } else {
+        navbar.style.padding = "15px 10px";
+        logo.style.fontSize = "35px";
+    }
 }
