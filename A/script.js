@@ -23,3 +23,32 @@ function toggleFooterVisibility() {
         footer.classList.remove('visible');
     }
 }
+
+// Function to check if an element is in viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+  
+  // Function to add fade-in class when element is in viewport
+  function addFadeInClass() {
+    const profileContainer = document.querySelector('.profile-container');
+    if (isInViewport(profileContainer)) {
+      const profileImage = profileContainer.querySelector('img');
+      profileImage.classList.add('fade-in');
+    }
+  }
+  
+  // Listen for scroll events and check if element is in viewport
+  window.addEventListener('scroll', function() {
+    addFadeInClass();
+  });
+  
+  // Initially check on page load
+  addFadeInClass();
+  

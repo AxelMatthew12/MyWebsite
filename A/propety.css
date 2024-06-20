@@ -138,8 +138,19 @@ div.desc {
   }
 }
 
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+.profile-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.profile-container img {
+  width: 450px; /* Sesuaikan ukurannya sesuai kebutuhan */
+  height: auto;
+  margin-left: 20px;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+.profile-container img.fade-in {
+  opacity: 1;
 }
